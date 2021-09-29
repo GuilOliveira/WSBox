@@ -88,20 +88,20 @@ class Sand(pg.sprite.Sprite):
     def fall(self):
         block_list[self.x][self.y] = "air"
         block_list[self.x][self.y + 1] = "sand"
-        self.rect.y += 1 * BLOCKSIZE
+        self.rect.y += BLOCKSIZE
         self.y += 1
     def fall_left(self):
         block_list[self.x][self.y] = "air"
         block_list[self.x - 1][self.y + 1] = "sand"
-        self.rect.y += 1 * BLOCKSIZE
-        self.rect.x -= 1 * BLOCKSIZE
+        self.rect.y += BLOCKSIZE
+        self.rect.x -= BLOCKSIZE
         self.y += 1
         self.x -= 1
     def fall_right(self):
         block_list[self.x][self.y] = "air"
         block_list[self.x + 1][self.y + 1] = "sand"
-        self.rect.y += 1 * BLOCKSIZE
-        self.rect.x += 1 * BLOCKSIZE
+        self.rect.y += BLOCKSIZE
+        self.rect.x += BLOCKSIZE
         self.y += 1
         self.x += 1
     def die(self):
